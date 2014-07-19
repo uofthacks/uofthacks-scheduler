@@ -1,7 +1,7 @@
 uofthacks-scheduler
 ===================
 
-Backup scheduler for the UofTHacks server.
+Backup scheduler for the UofTHacks web server.
 
 Uses [whenever](https://github.com/javan/whenever) to deploy cron jobs.
 
@@ -9,15 +9,21 @@ Uses [whenever](https://github.com/javan/whenever) to deploy cron jobs.
 
 First, clone this repository into the home directory of the `root` user:
 
-	cd ~
-    git clone git@bitbucket.org:cssu/uofthacks-scheduler.git
+```bash
+cd ~
+git clone git@github.com:uofthacks/uofthacks-scheduler.git
+```
 
 Then make sure dependencies are installed:
 
-    cd ~/uofthacks-scheduler/
-    gem install bundler
-    bundle install
+```bash
+cd ~/uofthacks-scheduler/
+gem install bundler
+bundle install
+```
 
 To configure the crontab:
 
-    bundle exec whenever --update-crontab  # update the crontab using config/schedule.rb
+```bash
+bundle exec whenever --update-crontab  # update the crontab using config/schedule.rb
+```
